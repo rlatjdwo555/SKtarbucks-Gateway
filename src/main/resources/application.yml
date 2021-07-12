@@ -49,14 +49,14 @@ spring:
           uri: http://CafeManage:8080
           predicates:
             - Path=/cafes/** 
+        - id: MyPage
+          uri: http://MyPage:8081
+          predicates:
+            - Path= /myPages/**
         - id: ProductionManage
           uri: http://ProductionManage:8080
           predicates:
             - Path=/productions/**
-        - id: MyPage
-          uri: http://MyPage:8080
-          predicates:
-            - Path= /myPages/**
       globalcors:
         corsConfigurations:
           '[/**]':
