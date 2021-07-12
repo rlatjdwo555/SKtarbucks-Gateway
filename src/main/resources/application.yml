@@ -42,21 +42,21 @@ spring:
     gateway:
       routes:
         - id: OrderManage
-          uri: http://OrderManage:8081
+          uri: http://OrderManage:8080
           predicates:
             - Path=/orders/**
         - id: CafeManage
           uri: http://CafeManage:8080
           predicates:
             - Path=/cafes/** 
-        - id: MyPage
-          uri: http://MyPage:8080
-          predicates:
-            - Path= /myPages/**
         - id: ProductionManage
           uri: http://ProductionManage:8080
           predicates:
             - Path=/productions/**
+        - id: MyPage
+          uri: http://MyPage:8080
+          predicates:
+            - Path= /myPages/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -67,4 +67,6 @@ spring:
             allowedHeaders:
               - "*"
             allowCredentials: true
-
+            
+server:
+  port: 8080
