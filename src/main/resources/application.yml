@@ -42,7 +42,7 @@ spring:
     gateway:
       routes:
         - id: OrderManage
-          uri: http://OrderManage:8080
+          uri: http://OrderManage:8081
           predicates:
             - Path=/orders/**
         - id: CafeManage
@@ -50,7 +50,7 @@ spring:
           predicates:
             - Path=/cafes/** 
         - id: MyPage
-          uri: http://MyPage:8081
+          uri: http://MyPage:8080
           predicates:
             - Path= /myPages/**
         - id: ProductionManage
