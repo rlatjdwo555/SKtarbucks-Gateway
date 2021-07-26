@@ -70,15 +70,15 @@ spring:
           predicates:
             - Path= /myPages/**
         - id: Payment
-          uri: http://Payment:8085
+          uri: http://Payment:8080
           predicates:
             - Path= /payments/**
         - id: DeliveryManage
-          uri: http://localhost:8086
+          uri: http://DeliveryManage:8080
           predicates:
             - Path= /deliveries/**
         - id: PushManage
-          uri: http://localhost:8087
+          uri: http://PushManage:8080
           predicates:
             - Path= /pushes/**   
       globalcors:
