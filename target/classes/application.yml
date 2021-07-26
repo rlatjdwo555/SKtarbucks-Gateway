@@ -23,10 +23,18 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path= /myPages/**
-        - id: MarketingManage
+        - id: Payment
           uri: http://localhost:8085
           predicates:
-            - Path= /marketings/**
+            - Path= /payments/**
+        - id: Delivery
+          uri: http://localhost:8086
+          predicates:
+            - Path= /deliveries/**
+        - id: PushManage
+          uri: http://localhost:8087
+          predicates:
+            - Path= /pushes/**           
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -61,10 +69,18 @@ spring:
           uri: http://MyPage:8080
           predicates:
             - Path= /myPages/**
-        - id: MarketingManage
-          uri: http://MarketingManage:8080
+        - id: Payment
+          uri: http://Payment:8085
           predicates:
-            - Path= /marketings/**
+            - Path= /payments/**
+        - id: DeliveryManage
+          uri: http://localhost:8086
+          predicates:
+            - Path= /deliveries/**
+        - id: PushManage
+          uri: http://localhost:8087
+          predicates:
+            - Path= /pushes/**   
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -75,4 +91,3 @@ spring:
             allowedHeaders:
               - "*"
             allowCredentials: true
-
